@@ -8,6 +8,18 @@ const router = createRouter({
       name: "home",
       component: () => import("../views/HomeView.vue"),
     },
+    // student route group
+    {
+      path: "/student",
+      name: "student",
+      children: [
+        {
+          path: "",
+          name: "student-main",
+          component: () => import("../views/student/StudentMainView.vue"),
+        }
+      ]
+    },
     {
       path: "/:pathMatch(.*)*",
       name: "not-found",
