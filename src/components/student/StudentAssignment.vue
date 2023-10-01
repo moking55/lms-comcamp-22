@@ -3,7 +3,7 @@
     <div class="subheader-texture"></div>
   </div>
 
-  <v-card class="ma-6" rounded="lg" variant="flat" v-for="(item, index) in 2" :key="index">
+  <v-card class="ma-6 animate__animated animate__fadeIn" :style="{ 'animation-delay': `${index / 3}s` }" rounded="lg" variant="flat" v-for="(item, index) in 2" :key="index">
     <v-card-item>
       <v-card-title class="text-body-2 d-flex align-center">
         <v-icon icon="mdi-calendar" start></v-icon>
