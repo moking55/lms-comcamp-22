@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer">
+    <v-navigation-drawer v-model="drawer" app>
       <v-list-item class="d-flex py-4 justify-center profile-background">
         <div class="text-center">
           <v-img
