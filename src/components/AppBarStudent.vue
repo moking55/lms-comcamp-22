@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="drawer" app>
+  <v-navigation-drawer v-model="drawer" app :permanent="!isMobile()">
     <v-list-item class="d-flex py-4 justify-center profile-background">
       <div class="text-center">
         <v-img
@@ -40,7 +40,7 @@
     ></v-list-item>
   </v-navigation-drawer>
   <!-- appbar -->
-  <v-app-bar class="d-lg-none" collapse :elevation="2">
+  <v-app-bar v-if="isMobile()" collapse :absolute="true" :elevation="2">
     <v-btn icon @click="drawer = !drawer">
       <v-icon>mdi-menu</v-icon>
     </v-btn>
@@ -85,7 +85,7 @@ export default {
       toggleTheme,
       themeIcon
     };
-  }
+  },
 };
 </script>
 <style scoped>
