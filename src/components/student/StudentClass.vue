@@ -1,11 +1,4 @@
 <template>
-  <!-- <iframe
-    style="height: 100vh"
-    class="w-100"
-    src="https://revealjs.com/demo/?transition=none"
-    frameborder="0"
-  >
-  </iframe> -->
   <v-row class="pa-4 mt-8">
     <v-col cols="12" sm="6" lg="4" v-for="(item, index) in 4" :key="index">
       <v-card

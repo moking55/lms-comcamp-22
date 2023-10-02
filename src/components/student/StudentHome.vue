@@ -125,7 +125,7 @@ export default {
       items: [
         {
           title: "Maythawat Mahawan",
-          subtitle: "Yeoooo asd",
+          subtitle: "# Yeoooo asd",
           prependAvatar: "https://cdn.vuetifyjs.com/images/lists/ali.png"
         }
       ]
@@ -166,7 +166,7 @@ export default {
   background-color: #f5f5f5;
 }
 
-.md-content >>> img {
+.md-content:deep() > img {
   width: 300px !important;
   height: auto;
   object-fit: cover;

@@ -1,11 +1,11 @@
 <template>
-  <v-layout>
+  <v-app>
     <div style="position: absolute; width: 100vw; top: 0; z-index: 5">
       <!-- applied emit -->
       <v-progress-linear color="amber" indeterminate v-if="loading"></v-progress-linear>
     </div>
     <RouterView @fetching="(state) => (loading = state)" />
-  </v-layout>
+  </v-app>
 </template>
 <script>
 import { RouterView } from "vue-router";
