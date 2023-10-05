@@ -41,6 +41,41 @@ const router = createRouter({
         }
       ]
     },
+    // staff route group
+    {
+      path: "/staff",
+      name: "staff-dashboard",
+      component: () => import("../views/staff/StaffDashboard.vue"),
+      children: [
+        {
+          path: "",
+          name: "staff-home",
+          component: () => import("../components/staff/StaffHome.vue"),
+        },
+        {
+          path: "class",
+          name: "staff-class",
+          component: () => import("../components/staff/StaffClass.vue"),
+        },
+        {
+          path: "works",
+          name: "staff-works",
+          component: () => import("../components/staff/StaffAssignment.vue"),
+          children: [
+            {
+              path: "",
+              name: "staff-works-main",
+              component: () => import("../components/staff/assignments/AssignmentHome.vue"),
+            },
+            {
+              path: "create",
+              name: "staff-works-create",
+              component: () => import("../components/staff/assignments/CreateAssignment.vue"),
+            }
+          ]
+        }
+      ]
+    },
     {
       path: "/:pathMatch(.*)*",
       name: "not-found",
