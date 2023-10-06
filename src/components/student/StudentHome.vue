@@ -105,7 +105,7 @@
               </v-col>
               <v-col cols="10" class="md-content">
                 <h3 class="font-weight-bold mb-1">นาย สมชาย ใจดี</h3>
-                <Markdown :source="item.subtitle" />
+                <MdPreview v-model="item.subtitle" class="md-content" />
               </v-col>
             </v-row>
           </v-card-text>
@@ -115,17 +115,17 @@
   </v-container>
 </template>
 <script>
-import Markdown from "vue3-markdown-it";
+import { MdPreview } from "md-editor-v3";
 export default {
   components: {
-    Markdown
+    MdPreview
   },
   data() {
     return {
       items: [
         {
           title: "Maythawat Mahawan",
-          subtitle: "# Yeoooo asd",
+          subtitle: "![](https://cdn.vuetifyjs.com/images/lists/ali.png)",
           prependAvatar: "https://cdn.vuetifyjs.com/images/lists/ali.png"
         }
       ]
@@ -165,9 +165,11 @@ export default {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #f5f5f5;
 }
-
-.md-content:deep() > img {
-  width: 300px !important;
+.md-content {
+  margin: 0;
+}
+.md-content:deep() > * > * > * > img {
+  width: 100% !important;
   height: auto;
   object-fit: cover;
   border-radius: 10px;

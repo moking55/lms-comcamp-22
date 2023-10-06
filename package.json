@@ -16,7 +16,6 @@
     "vue": "^3.3.4",
     "vue-confetti": "^2.3.0",
     "vue-router": "^4.2.4",
-    "vue3-markdown-it": "^1.0.10",
     "vuetify": "^3.3.19"
   },
   "devDependencies": {
