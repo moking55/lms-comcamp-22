@@ -34,18 +34,20 @@
       prepend-icon="mdi-qrcode"
       to="/student/assignment"
     ></v-list-item>
-    <v-list-group value="Admin">
-      <template v-slot:activator="{ props }">
-        <v-list-item v-bind="props" prepend-icon="mdi-access-point" title="Advance"></v-list-item>
-      </template>
-      <v-list-item
-        link
-        key="ads"
-        title="จัดการผู้ใช้"
-        prepend-icon="mdi-account-group"
-        to="/admin/user"
-      ></v-list-item>
-    </v-list-group>
+    <v-list v-model:opened="open">
+      <v-list-group value="Admin">
+        <template v-slot:activator="{ props }">
+          <v-list-item v-bind="props" prepend-icon="mdi-access-point" title="Advance"></v-list-item>
+        </template>
+        <v-list-item
+          link
+          key="ads"
+          title="จัดการผู้ใช้"
+          prepend-icon="mdi-account"
+          to="/admin/user"
+        ></v-list-item>
+      </v-list-group>
+    </v-list>
   </v-navigation-drawer>
   <!-- appbar -->
   <v-app-bar v-if="isMobile()" collapse :absolute="true" :elevation="2">
@@ -66,7 +68,8 @@ export default {
     return {
       drawer: !this.isMobile(),
       isDarkTheme: localStorage.getItem("theme") === "dark",
-      currentText: "Welcome"
+      currentText: "Welcome",
+      open: ['Admin']
     };
   },
   methods: {

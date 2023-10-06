@@ -23,6 +23,18 @@ const router = createRouter({
           path: "assignment",
           name: "student-assignment",
           component: () => import("../components/student/StudentAssignment.vue"),
+          children: [
+            {
+              path: "",
+              name: "student-assignment-main",
+              component: () => import("../components/student/assignment/AssignmentList.vue"),
+            },
+            {
+              path: ":id",
+              name: "student-assignment-detail",
+              component: () => import("../components/student/assignment/AssignmentDetail.vue"),
+            }
+          ]
         },
         {
           path: "document",
