@@ -1,7 +1,6 @@
 <template>
   <v-img
-    class="animate__animated animate__slideInDown"
-    style="animation-duration: 500ms"
+    class="animate__animated animate__slideInDown staff-header-animation-speed-500ms"
     height="200px"
     cover
     src="https://in.ivao.aero/admin/core/uploads/Web/heading8.jpg"
@@ -12,8 +11,8 @@
     >
       <v-container fluid class="d-flex justify-space-between align-center">
         <h2>งานในชั้นเรียน</h2>
-        <v-btn class="bg-success" size="x-large" :to="{ name: 'staff-works-create' }"
-          >เพิ่มข้อมูล</v-btn
+        <v-btn class="bg-success" size="x-large" prepend-icon="mdi-plus" :to="{ name: 'staff-works-create' }"
+          >เพิ่มงานใหม่</v-btn
         >
       </v-container>
     </div>

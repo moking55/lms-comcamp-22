@@ -3,3 +3,7 @@
 body {
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
+
+.staff-header-animation-speed-500ms {
+    animation-duration: 500ms
+}

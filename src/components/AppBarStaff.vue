@@ -20,7 +20,7 @@
       link
       title="เอกสารประกอบ"
       prepend-icon="mdi-folder"
-      to="/student/document"
+      to="/staff/document"
     ></v-list-item>
     <v-list-item
       link
@@ -44,6 +44,13 @@
           key="ads"
           title="จัดการผู้ใช้"
           prepend-icon="mdi-account"
+          to="/admin/user"
+        ></v-list-item>
+        <v-list-item
+          link
+          key="ads"
+          title="ตั้งค่า QR Code"
+          prepend-icon="mdi-qrcode"
           to="/admin/user"
         ></v-list-item>
       </v-list-group>

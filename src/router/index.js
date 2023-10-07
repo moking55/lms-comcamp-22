@@ -85,6 +85,11 @@ const router = createRouter({
               component: () => import("../components/staff/assignments/CreateAssignment.vue"),
             }
           ]
+        },
+        {
+          path: "document",
+          name: "staff-document",
+          component: () => import("../components/staff/StaffDocuments.vue"),
         }
       ]
     },
