@@ -9,30 +9,35 @@
         {{ currentText }}
       </h3>
     </v-list-item>
-    <v-list-item link title="แผงควบคุม" prepend-icon="mdi-home" to="/staff"></v-list-item>
+    <v-list-item
+      link
+      title="แผงควบคุม"
+      prepend-icon="mdi-home"
+      :to="{ name: 'staff-home' }"
+    ></v-list-item>
     <v-list-item
       link
       title="เนื้อหาการสอน"
       prepend-icon="mdi-book-open-page-variant"
-      to="/staff/class"
+      :to="{ name: 'staff-class' }"
     ></v-list-item>
     <v-list-item
       link
       title="เอกสารประกอบ"
       prepend-icon="mdi-folder"
-      to="/staff/document"
+      :to="{ name: 'staff-document' }"
     ></v-list-item>
     <v-list-item
       link
       title="งานในชั้นเรียน"
       prepend-icon="mdi-clipboard-text"
-      to="/staff/works"
+      :to="{ name: 'staff-works' }"
     ></v-list-item>
     <v-list-item
       link
       title="คิวอาร์โค้ด"
       prepend-icon="mdi-qrcode"
-      to="/student/assignment"
+      :to="{ name: 'staff-qrcode' }"
     ></v-list-item>
     <v-list v-model:opened="open">
       <v-list-group value="Admin">
@@ -44,14 +49,14 @@
           key="ads"
           title="จัดการผู้ใช้"
           prepend-icon="mdi-account"
-          to="/admin/user"
+          :to="{ name: 'staff-users-main' }"
         ></v-list-item>
         <v-list-item
           link
           key="ads"
           title="ตั้งค่า QR Code"
           prepend-icon="mdi-qrcode"
-          to="/admin/user"
+          :to="{ name: 'staff-qrcode' }"
         ></v-list-item>
       </v-list-group>
     </v-list>
@@ -76,7 +81,7 @@ export default {
       drawer: !this.isMobile(),
       isDarkTheme: localStorage.getItem("theme") === "dark",
       currentText: "Welcome",
-      open: ['Admin']
+      open: ["Admin"]
     };
   },
   methods: {
