@@ -14,7 +14,7 @@
         </v-btn>
         <div class="d-block">
           <v-btn size="x-small" variant="tonal" class="mx-1">ตั้งค่าบัญชี</v-btn>
-          <v-btn size="x-small" variant="tonal" class="mx-1" color="red">ออกจากระบบ</v-btn>
+          <v-btn size="x-small" variant="tonal" class="mx-1" color="red" :to="{name: 'logout'}">ออกจากระบบ</v-btn>
         </div>
       </div>
     </v-list-item>
